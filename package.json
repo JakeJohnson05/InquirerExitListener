@@ -1,5 +1,5 @@
 {
-  "name": "exit_function",
+  "name": "inquirer-exit-listener",
   "version": "1.0.0",
   "description": "Adds listeners for exit events for inquirer prompts",
   "main": "index.js",
