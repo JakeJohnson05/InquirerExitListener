@@ -12,23 +12,25 @@ $ npm install JakeJohnson05/InquirerExitListener
 
 ## Usage
 
+require this package before creating any inquiries and before possible long load times
+
 ```js
 require('inquirer-exit-listener');
 
 // Now listening for close events
 ```
 
-or call the exit function directly
+or call the exit function programmatically
 
 
 ```js
 const exitFunction = require('inquirer-exit-listener');
 
-// Now listening for close events
+// Still listening for close events
 
 // Call exitFunction() to programmatically end process
 exitFunction();
-// OR
+// (beta) Include exit status code
 exitFunction(1);
 ```
 
