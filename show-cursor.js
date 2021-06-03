@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import showCursor, {show} from 'cli-cursor';
+const showCursor = require('cli-cursor');
 
-show();
+showCursor.show();
 
-export default showCursor;
+module.exports = showCursor;

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import {show} from 'cli-cursor';
+const cliCursor = require('cli-cursor');
 
 function exitHandler(code = 1) {
 	console.log(`\n${code}`);
-	show();
+	cliCursor.show();
 	process.exit(code);
 }
 
@@ -13,4 +13,4 @@ process.openStdin().on('keypress', (_, key) => {
 	}
 });
 
-export default exitHandler;
+module.exports = exitHandler;
