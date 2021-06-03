@@ -1,33 +1,40 @@
 {
   "name": "inquirer-exit-listener",
   "version": "2.1.0",
-  "type": "commonjs",
   "description": "Adds listeners for exit events for inquirer prompts",
   "author": "Jake Johnson",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JakeJohnson05/InquirerExitListener.git"
   },
-  "engines": {
-    "node": ">=10"
-  },
+  "main": "lib/index.js",
   "files": [
-    "index.js",
-    "show-cursor.js"
+    "lib/"
   ],
-  "main": "index.js",
   "bin": {
-    "show-cursor": "./show-cursor.js"
+    "show-cursor": "lib/show-cursor.js"
   },
   "scripts": {
-    "test": "xo",
-    "xoFix": "xo --fix"
+    "start": "ts-node src/index.ts",
+    "create": "npm run build && node lib/index.js",
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "xo && tsd"
   },
   "license": "ISC",
   "dependencies": {
     "cli-cursor": "^3.1.0"
   },
   "devDependencies": {
+    "@types/node": "^15.12.0",
+    "ts-node": "^10.0.0",
+    "tsd": "^0.17.0",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2",
     "xo": "^0.40.2"
+  },
+  "xo": {
+    "fix": true
   }
 }

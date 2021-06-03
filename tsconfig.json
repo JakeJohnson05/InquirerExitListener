@@ -1,0 +1,30 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": "src",
+		"declaration": true,
+		"downlevelIteration": true,
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"experimentalDecorators": true,
+		"lib": [
+			"es2018",
+			"dom"
+		],
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"outDir": "lib",
+		"removeComments": true,
+		"sourceMap": true,
+		"strictNullChecks": true,
+		"target": "es6"
+	},
+	"include": [
+		"./src"
+	],
+	"typings": [
+		"./lib/*.d.ts",
+		"./node_modules/@types"
+	]
+}
