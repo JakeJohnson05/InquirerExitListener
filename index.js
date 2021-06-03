@@ -1,20 +1,16 @@
 #!/usr/bin/env node
-'use strict'
+import {show} from 'cli-cursor';
 
-const cliCursor = require('cli-cursor');
-
-const exitFunction = (code = 1) => {
-	console.log('');
-	cliCursor.show();
+function exitHandler(code = 1) {
+	console.log(`\n${code}`);
+	show();
 	process.exit(code);
 }
 
-process.openStdin().on('keypress', function (_, key) {
-	if (key) {
-		if ((key.name === 'c' && key.ctrl) || (key.name === 'escape')) {
-			exitFunction();
-		}
+process.openStdin().on('keypress', (_, key) => {
+	if (key && ((key.name === 'c' && key.ctrl) || (key.name === 'escape'))) {
+		exitHandler.bind(null, 1)();
 	}
 });
 
-module.exports = exitFunction;
+export default exitHandler;

@@ -7,12 +7,27 @@
     "type": "git",
     "url": "git+https://github.com/JakeJohnson05/InquirerExitListener.git"
   },
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "index.js",
+    "show-cursor.js"
+  ],
   "main": "index.js",
+  "bin": {
+    "show-cursor": "./show-cursor.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "xo && ava",
+    "xoFix": "xo --fix"
   },
   "license": "ISC",
   "dependencies": {
     "cli-cursor": "^3.1.0"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "xo": "^0.40.2"
   }
 }
