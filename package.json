@@ -1,6 +1,7 @@
 {
   "name": "inquirer-exit-listener",
   "version": "2.1.0",
+  "type": "commonjs",
   "description": "Adds listeners for exit events for inquirer prompts",
   "author": "Jake Johnson",
   "repository": {
@@ -19,7 +20,7 @@
     "show-cursor": "./show-cursor.js"
   },
   "scripts": {
-    "test": "xo && ava",
+    "test": "xo",
     "xoFix": "xo --fix"
   },
   "license": "ISC",
@@ -27,7 +28,6 @@
     "cli-cursor": "^3.1.0"
   },
   "devDependencies": {
-    "ava": "^3.15.0",
     "xo": "^0.40.2"
   }
 }
